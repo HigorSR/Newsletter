@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 px-16 max-w-xl">
           <h1 className="font-bold text-6xl">Stay updated!</h1>
           <p className="text-lg">
-            Join 60,000+ product managers receiving monthly updates on: aaaaaaaaaaaaaaaaaaaaaaaaa
+            Join 60,000+ product managers receiving monthly updates on: 
           </p>
           <div className="flex flex-col gap-3">
             <div className="flex gap-4">
