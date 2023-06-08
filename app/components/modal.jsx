@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import icon_suc from '../../public/icon-success.svg'
 
-export default function Modal({ isOpen, setOpenModal }) {
+export default function Modal({ isOpen, setOpenModal, email }) {
   if (isOpen) {
     return (
       <div className="fixed w-screen h-screen flex items-center justify-center bg-slate-900/30 backdrop-blur ">
@@ -10,8 +10,8 @@ export default function Modal({ isOpen, setOpenModal }) {
           <h1 className="font-bold text-6xl">Thanks for subscribing!</h1>
           <p className="text-lg">
             A confirmation email has been sent to
-            <span className="font-bold"> email@company.com</span>. Please
-            open it and click the button inside to confirm your subscription.
+            <span className="font-bold"> {email}</span>. Please open it and
+            click the button inside to confirm your subscription.
           </p>
           <button
             onClick={setOpenModal}
@@ -24,5 +24,4 @@ export default function Modal({ isOpen, setOpenModal }) {
       </div>
     )
   }
-  return null
 }
