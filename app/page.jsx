@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import imgdesktop from '../public/imgdesktop.svg'
 import icon_list from '../public/icon-list.svg'
 import Modal from './components/modal'
+import ResponsiveImage from './components/ResponsiveImage'
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false)
@@ -38,8 +38,8 @@ export default function Home() {
 
   return (
     <main className="flex items-center justify-center w-screen h-screen bg-slate-900">
-      <div className="flex items-center bg-white p-4 rounded-3xl">
-        <div className="flex flex-col gap-6 px-16 max-w-xl">
+      <div className="flex items-center bg-white p-4 rounded-3xl max-lg:flex-col-reverse max-lg:pt-0">
+        <div className="flex flex-col gap-6 px-16 max-w-xl max-lg:px-0">
           <h1 className="font-bold text-6xl">Stay updated!</h1>
           <p className="text-lg">
             Join 60,000+ product managers receiving monthly updates on:
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
 
         <div>
-          <Image src={imgdesktop} alt="logo" />
+          <ResponsiveImage/>
         </div>
       </div>
 
